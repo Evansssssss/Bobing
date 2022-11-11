@@ -15,12 +15,14 @@
   height: 1000rpx;
   width: 90vw;
 }
+
 .list-box{
   height: 500rpx;
   overflow-y: auto;
   margin: 0 15px;
   padding: 0 15px;
 }
+
 .list{
   display: flex;
   border-bottom: 1px solid #3c8e94;
@@ -36,6 +38,7 @@
   text-align: center;
   color: #28797F;
 }
+
 .list input{
   flex: 1;
   font-family: '宋体';
@@ -43,6 +46,7 @@
   text-align: start;
   color: #28797F;
 }
+
 .list> view{
   flex: 1;
 }
