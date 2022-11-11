@@ -6,7 +6,7 @@ const levelMap = {
 
 Page({
   /**
-   * 页面的初始数据
+   * 页面初始数据
    */
   data: {
     playerList:[],
