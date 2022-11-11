@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view bindtap="ToGame" class="main-btn" style="height: 60px; width: 220px;  background-image: url(https://s1.ax1x.com/2022/11/06/xjYqaQ.png);background-size: contain;">
+  </view>
+  <view bindtap='ToRoom' class="main-btn" style="top: 70vh; height: 60px; width: 220px;  background-image: url(https://s1.ax1x.com/2022/11/06/xjYXPs.png);background-size: contain;">
+  </view>
+</view>

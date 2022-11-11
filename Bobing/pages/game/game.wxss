@@ -1,0 +1,206 @@
+/* pages/game.wxss */
+.container{
+  height: 100vh;
+  background-size: cover;
+  padding: 24rpx 0 ;
+  display: block;
+}
+
+.btn-list{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36rpx;
+}
+
+.avatar{
+  position: absolute;
+  top: -2vh;
+  left: -2vw;
+  height: 60% !important;
+  width: 60% !important;
+  opacity: 0.5;
+}
+
+.active{
+  opacity: 1;
+}
+
+.rond{
+  background-color: #FBFAE4;
+  padding: 12rpx 60rpx;
+  border-radius: 12rpx;
+  color: #2D8387;
+  margin: 0 24rpx 0 108rpx;
+  z-index: 5;
+}
+
+.avatar-grid{
+  display: flex;
+  padding: 48rpx;
+  flex-wrap: wrap;
+
+  margin-top: 5vh;
+}
+
+.shell{
+  height: 120rpx;
+  width: 25%;
+  position: relative;
+}
+
+.avatar-grid image{
+  height: 80%; 
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tou-grid{
+  margin-top: 12vh;
+  padding: 2vh 10vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@keyframes grapp{
+  0%, 100%{
+    top: -150rpx;
+  }
+  50%{
+    top: 0;
+  }
+}
+
+.grapAnima{
+  animation: grapp 0.5s ease-in-out 1;
+}
+
+.line{
+  position: absolute;
+  top: -150rpx;
+  left: 40vw;
+
+}
+
+.liner{
+  height: 600rpx;
+
+  width: 6rpx;
+  background-color: rgba(46, 65, 22, 0.788);
+  margin: 0 auto;
+}
+
+.moon{
+  height: 140rpx;
+  width: 140rpx;
+  transform: translateY(-10rpx);
+}
+
+.tou-grid .shell{
+  height: 120rpx;
+  width: 33%;
+  margin-bottom: 2vh;
+}
+
+.tou-grid image{
+  height: 100%; 
+  width: 100%;
+}
+
+.playarea{
+  height: 25vh;
+  padding: 6rpx;
+  width: 90vw;
+  background-color: rgba(0, 0, 0, 0.358);
+  margin: 0 auto;
+  border-radius: 40rpx;
+  overflow-y: auto;
+}
+
+.hisList{
+  color: rgb(216, 216, 216);
+  margin: 14rpx 24rpx;
+  font-size: 34rpx;
+  display: flex;
+}
+
+.hisList image{
+  flex: 1;
+  height: 46rpx;
+  width: 46rpx;
+  margin: 0 10rpx;
+}
+
+.gameover{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameover .title{
+  color: rgb(230, 230, 230);
+  font-size: 60rpx;
+  font-weight: 500;
+}
+.gameover .btns{
+  margin-top: 40rpx;
+  margin-bottom: 180rpx;
+}
+
+.gameover .btns button{
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 2rpx solid white;
+  margin: 40rpx;
+}
+
+.hide{
+  display: none;
+}
+
+.rank{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 19;
+}
+
+.rank-panel{
+  width: 80vw;
+  height: 62vh;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 2vh;
+  
+}
+
+.list{
+  display: flex;
+  border-bottom: 1px solid #3c8e94;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+
+.list text{
+  flex: 1;
+  font-family: '宋体';
+  font-weight: bolder;
+
+  text-align: center;
+  color: #28797F;
+}
+
+.list-box{
+  height: 500rpx;
+  overflow-y: auto;
+  margin: 0 15px;
+  padding: 0 15px;
+}

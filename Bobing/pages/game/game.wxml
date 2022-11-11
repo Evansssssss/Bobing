@@ -1,0 +1,83 @@
+<!--pages/game.wxml-->
+<view class="gameover {{isHideGO?'hide':''}}">
+  <text class="title">游戏结束</text>
+  <view class="btns">
+    <button bindtap="watchRank">查看榜单</button>
+    <button bindtap="restart">重新游戏</button>
+    <button bindtap="exit">结束游戏</button>
+  </view>
+</view>
+
+<view bindtap="closeRank" class="rank {{isHide?'hide':''}}">
+  <view style="background-image: url(../../asset/img/查看榜单.png);height: 130rpx; width: 500rpx;background-size:cover;margin: 0 auto;margin-top: 160rpx;"></view>
+  <view class="rank-panel" style="background-image: url(https://s1.ax1x.com/2022/11/06/xjtNsf.png);">
+    <view class="list" style="margin: 0 30px;padding-top: 60rpx;">
+      <text>玩家</text>
+      <text>状元</text>
+      <text>对堂</text>
+      <text>三红</text>
+      <text>四进</text>
+      <text>二举</text>
+      <text>一秀</text>
+    </view>
+    <view class="list-box">
+    <block wx:for="{{rankList}}" wx:for-item="player">
+      <view class="list">
+        <text>{{player.name}}</text>
+        <text>{{player.zy}}</text>
+        <text>{{player.dt}}</text>
+        <text>{{player.sh}}</text>
+        <text>{{player.sj}}</text>
+        <text>{{player.ej}}</text>
+        <text>{{player.yx}}</text>
+      </view>
+    </block>
+      
+    </view>
+  </view>
+</view>
+
+<view class="my-c container" style="background-image: url(https://s1.ax1x.com/2022/11/06/xjtGRI.png);">
+
+  <view class="btn-list">
+      <image bindtap="exit" style="height: 60rpx; width: 60rpx;" src="../../asset/img/退出.png"/>
+      <view class="rond">轮数 {{curRoll}}/{{totalRoll}}</view>
+      <image bindtap="watchRank" style=" height: 60rpx; width: 60rpx;"  src="../../asset/img/奖杯.png" alt="" srcset=""/>
+      <image style="height: 60rpx; width: 60rpx;"  src="../../asset/img/规则.png" alt="" srcset=""/>
+  </view>
+  <view bindtap="Roll" class="line {{isGrap?'grapAnima':''}}">
+    <view class="liner"></view>
+    <image mode="aspectFit" class="moon"  src="../../asset/img/月饼.png" alt="" srcset=""/>
+  </view>
+  <view class="avatar-grid">
+    <block wx:for="{{playerList}}" wx:for-index="idx" wx:for-item="player">
+      <view class="shell">
+        <image wx:if="{{player.ex}}" class="avatar {{curPlayer == idx ? 'active':''}}" mode="aspectFit" src="https://api.multiavatar.com/{{player.name}}.png" alt="" srcset=""/>
+        <image mode="aspectFit" src="../../asset/img/小兔子.png" alt="" srcset=""/>
+      </view>
+    </block>
+  </view>
+  <view class="tou-grid">
+    <view class="shell"><image mode="aspectFit" src="../../asset/img/{{dice1}}.png" alt="" srcset=""/></view>
+    <view class="shell"><image mode="aspectFit" src="../../asset/img/{{dice2}}.png" alt="" srcset=""/></view>
+    <view class="shell"><image mode="aspectFit" src="../../asset/img/{{dice3}}.png" alt="" srcset=""/></view>
+    <view class="shell"><image mode="aspectFit" src="../../asset/img/{{dice4}}.png" alt="" srcset=""/></view>
+    <view class="shell"><image mode="aspectFit" src="../../asset/img/{{dice5}}.png" alt="" srcset=""/></view>
+    <view class="shell"><image mode="aspectFit" src="../../asset/img/{{dice6}}.png" alt="" srcset=""/></view>
+  </view>
+  <view class="playarea">
+    <block wx:for="{{playHistory}}" wx:key="num" wx:for-item="round">
+      <view class="hisList">
+        <text>{{round.num}}. </text>
+        <text  style="width: 200rpx;"> {{round.name}}</text>
+        <text  style="width: 130rpx;"> {{round.level}}</text>
+        <image mode="aspectFit" src="../../asset/img/{{round.d1}}.png" alt="" srcset=""/>
+        <image mode="aspectFit" src="../../asset/img/{{round.d2}}.png" alt="" srcset=""/>
+        <image mode="aspectFit" src="../../asset/img/{{round.d3}}.png" alt="" srcset=""/>
+        <image mode="aspectFit" src="../../asset/img/{{round.d4}}.png" alt="" srcset=""/>
+        <image mode="aspectFit" src="../../asset/img/{{round.d5}}.png" alt="" srcset=""/>
+        <image mode="aspectFit" src="../../asset/img/{{round.d6}}.png" alt="" srcset=""/>
+      </view>
+    </block>
+  </view>
+</view>

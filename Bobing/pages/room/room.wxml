@@ -1,0 +1,35 @@
+<!--pages/room/room.wxml-->
+<view class="container" style="background-image: url(https://s1.ax1x.com/2022/11/06/xjtGRI.png);">
+  <view>
+    <image style="height: 132rpx; width: 490rpx;" src="../../asset/img/create-room.png" alt="" srcset=""/>
+  </view>
+  <view class="back" style="background-image: url(https://s1.ax1x.com/2022/11/06/xjtNsf.png);">
+    <view class="list" style="  margin: 0 30px;">
+      <text>序号</text>
+      <text>玩家名称</text>
+      <text>操作</text>
+    </view>
+    <view class="list-box" >
+      <block wx:for="{{playerList}}" wx:for-index="idx">
+      <view class="list" >
+      <text>{{idx+1}}</text>
+      <input data-id="{{idx}}" bindblur="setName" type="text" placeholder="请输入玩家姓名" />
+      <view class="btns">
+        <view data-id="{{idx}}" bindtap="delPlayer" class="icon" style="background-image: url(https://s1.ax1x.com/2022/11/06/xjtPZF.png);"></view>
+        <view class="icon" style="background-image: url(https://s1.ax1x.com/2022/11/06/xjYjGn.png);"></view>
+      </view>
+    </view >
+    </block>
+    </view>
+
+    <button bindtap="addPlayer" class="btn-new">点我新增玩家</button>
+    <view class="playroll">
+      <label for="add">游戏轮数：</label>
+      <input id="add" type="number" value="{{playRound}}" bindinput="roundValue"/>
+    </view>
+    <view class="tbtn">
+      <button bindtap="back" class="btn-new" type="primary">返回</button>
+      <button bindtap="player" class="btn-new" type="primary">确认</button>
+    </view>
+  </view>
+</view>

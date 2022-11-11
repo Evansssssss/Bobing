@@ -1,0 +1,100 @@
+/* pages/room/room.wxss */
+.container{
+  height: 100vh;
+  justify-content: start;
+  background-size: cover;
+  padding: 40rpx;
+}
+
+.back{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing:border-box;
+  padding: 40rpx 0;
+  height: 1000rpx;
+  width: 90vw;
+}
+.list-box{
+  height: 500rpx;
+  overflow-y: auto;
+  margin: 0 15px;
+  padding: 0 15px;
+}
+.list{
+  display: flex;
+  border-bottom: 1px solid #3c8e94;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+}
+
+.list text{
+  flex: 1;
+  font-family: '宋体';
+  font-weight: bolder;
+  font-size: 36rpx;
+  text-align: center;
+  color: #28797F;
+}
+.list input{
+  flex: 1;
+  font-family: '宋体';
+  font-size: 28rpx;
+  text-align: start;
+  color: #28797F;
+}
+.list> view{
+  flex: 1;
+}
+
+.list .btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.list .btns .icon{ 
+  height: 32rpx;
+  width: 32rpx;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn-new{
+  margin: 40rpx;
+  background-color: #297980;
+  font-family: '宋体';
+  color: white;
+}
+
+.playroll{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #297980;
+
+}
+.playroll label{
+  color: #297980;
+  font-family: '宋体';
+  font-weight: bolder;
+}
+
+#add{
+  display: inline-block;
+  vertical-align: text-top;
+  width: 100rpx;
+  border-bottom: 1px solid #3c8e94;
+}
+
+.tbtn{
+  display: flex;
+  padding: 0 40rpx;
+}
+
+.tbtn button{
+  margin-left: 40rpx !important;
+  margin-right: 40rpx !important;
+  background-color: #FFDCB0 !important;
+  color: #297980;
+}

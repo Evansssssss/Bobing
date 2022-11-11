@@ -1,0 +1,10 @@
+.container{
+  height: 100vh;
+  background-size: cover;
+  background-image: url('https://s1.ax1x.com/2022/11/06/xjYoKf.jpg');
+}
+
+.main-btn{
+  position: absolute;
+  top: 60vh;
+}
